@@ -31,3 +31,4 @@ function backHome(){
 	var toShow = document.getElementById("mainPage");
 	toShow.style.display = "block";
 }
+
