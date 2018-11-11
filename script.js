@@ -1,37 +1,16 @@
+var currentlocation;
+
+window.onload = function(){
+	getAddressLocation(); //TODO
+}
+
+
 function sendMessage(){
 	var phoneNumber = "17574471488@tmomail.net";
 	
 }
 
-var currentlocation;
-function firearmButtonClick(){
-	var x = document.getElementById("mainPage");
-	x.style.display = "none";
-	
-	var y = document.getElementById("firearmSubpage");
-	y.style.display = "block";
-	
-	currentlocation = getAddressLocation(); //TODO
-}
 
-function cyberButtonClick() {
-	var x = document.getElementById("mainPage");
-	x.style.display = "none";
-	
-	var y = document.getElementById("cyberSubpage");
-	y.style.display = "block";
-}
-
-function backHome(){
-	
-	var toHide = document.getElementsByTagName("div");
-	for (var i = 0; i < toHide.length; i++) {
-		toHide[i].style.display = "none";
-	}
-	
-	var toShow = document.getElementById("mainPage");
-	toShow.style.display = "block";
-}
 
 function sendShotMessage(){
 	 //var currentlocation = await getAddressLocation();
@@ -88,12 +67,10 @@ function getAddress(pos){
 		//console.log(result);
 		var label = result.Response.View[0].Result[0].Location.Address.Label;
       //alert(label);
-	  return label;
+	  currentlocation =  label;
 	 
     }, function (error) {
       alert(error);
     });
 	
-	console.log(label);
-	return label;
 }
