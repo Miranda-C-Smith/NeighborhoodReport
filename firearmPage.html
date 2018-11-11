@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<script src="script.js"></script>
+	<head>
+		<link rel="stylesheet" type'text/css" href="style.css">
+		
+		<!-- For HERE location -->
+		<script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+		<script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>		
+		<div id="firearmSubpage">
+			<button onclick="window.location.href='./index.html'">Back</button>
+			<h2> Firearm sub page</h2>
+			
+			<h3>Number of shots heard</h3>
+			<input type="radio" name="numShots" value="1 gunshot"> 1<br>
+			<input type="radio" name="numShots" value="2 to 6 gunshots"> 2-6<br>
+			<input type="radio" name="numShots" value="Greater than 6 gunshots"> > 6 
+
+			<h3>Distance from your location</h3>
+			<input type="radio" name="shotDistance" value="less than 1 mile"> 1<br>
+			<input type="radio" name="shotDistance" value="1 to 5 miles"> 2-5<br>
+			<input type="radio" name="shotDistance" value="greater than 5 miles"> > 5 
+
+			<h3>Addtional information</h3>
+			<textarea id ="additionalShotInfo" rows="4" cols="50"></textarea>
+			
+			<button onclick="sendShotMessage()">Submit</button>
+			
+		</div>
+	</body>
+</html>
