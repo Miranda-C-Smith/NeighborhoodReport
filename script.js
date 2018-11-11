@@ -20,3 +20,14 @@ function cyberButtonClick() {
 	var y = document.getElementById("cyberSubpage");
 	y.style.display = "block";
 }
+
+function backHome(){
+	
+	var toHide = document.getElementsByTagName("div");
+	for (var i = 0; i < toHide.length; i++) {
+		toHide[i].style.display = "none";
+	}
+	
+	var toShow = document.getElementById("mainPage");
+	toShow.style.display = "block";
+}
